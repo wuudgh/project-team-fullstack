@@ -1,5 +1,9 @@
 ## Setting up
 
+- One team member must fork the repository and ensure each team member has access to contribute to the fork.
+- Other team members will *clone* that fork. All work will be pushed to the single forked repository. At the end of the project, you can fork the fork so everybody has the finished project in their personal github accounts.
+- One team member must create a pull request to merge this `scaffolded-with-auth` branch into the `main` branch.
+
 Take a little bit of time to familiarise yourself with the project structure - this exercise has both a front-end React app (`src/client/`) *and* a back-end express API (`src/server/`) in it.
 
 Note: Each team member must create their own databases, development environment databases are never usually shared.
