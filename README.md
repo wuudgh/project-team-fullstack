@@ -21,8 +21,11 @@
 
 - Students will work on feature branches and create pull requests to merge in to the `main` branch upon teacher approval. The team must discuss and provide feedback on the implementation in the PR before a teacher provides their feedback and final approval. [See pull-requests.md for the process.](./pull-requests.md)
 - Stakeholder demo’s at the end of each sprint (3 days)
+    - Did you plan effectively for the current sprint?
+    - Did you perform daily standups?
+    - Can you accurately explain the work you’ve completed?
+    - Did you complete all of the tasks in the sprint?
 - End of project retrospectives
-- End of project survey to collect feedback
 
 ## Getting started
 

@@ -23,8 +23,8 @@ All work must be done on feature branches which are pushed to GitHub. A new pull
     - Are there single commits with irrelevant / huge changes?
 3. Check team discussion and provide validation or further feedback, linking relevant documentation and providing examples when useful.
 4. Check for areas of code not discussed by the team which warrant feedback.
-5. If satisfied, approve the PR.
-6. If there are drastic improvements that should be made, request changes and have the student notify you when updates have been made. Repeat until approval. This should only happen if absolutely necessary, for example:
+5. If there are drastic improvements that should be made, request changes and have the student notify you when updates have been made. Repeat until approval. This should only happen if absolutely necessary, for example:
     1. Merging would break the app
     2. Code is fundamentally flawed
     3. Project requirements have been broken
+6. If satisfied, approve the PR.
