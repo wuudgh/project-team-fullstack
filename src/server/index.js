@@ -14,11 +14,9 @@ app.use(express.json());
 // Tell express to use a URL Encoding middleware
 app.use(express.urlencoded({ extended: true }));
 
+// Add your routes here
 
 
-
-const userRouter = require('./routers/user');
-app.use('/user', userRouter);
 
 
 
