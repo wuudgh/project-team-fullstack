@@ -8,7 +8,8 @@
 
 ## Project Requirements
 
-- Must be a full-stack application with a ReactJS frontend consuming data from a database-backend API
+- Must contain a well thought out entity relationship diagram and application design built via user stories
+- Must be a full-stack application with a [ReactJS](https://reactjs.org/) frontend consuming data from an [ElephantSQL](https://www.elephantsql.com/) database that is exposed to the client via an API built using [Express](https://expressjs.com/) and [Prisma](https://www.prisma.io/)
 - Must not expose sensitive information
 - Must not contain hard coded URL’s (routes are fine, `http://localhost` is not)
 - Commit messages must be consistent and meaningful
@@ -23,4 +24,12 @@
 - End of project retrospectives
 - End of project survey to collect feedback
 
-## Setting up
+## Getting started
+
+1. Choose which application you want to build as a team: [Option 1](./option-1.md) or [Option 2]()
+2. Choose the level of scaffolding you want to start with by selecting the appropriate branch
+    - `empty` - this branch contains no scaffolding. Not even a package.json file.
+    - `scaffolded` - this branch has ReactJS and Express set up.
+    - `scaffolded-with-auth` - the same as scaffolded but with authentication ready for you out of the box.
+3. Complete your sprint planning stage
+4. Read the setup instructions inside the `instructions.md` file on the branch you've chosen
