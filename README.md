@@ -29,7 +29,7 @@
 
 ## Getting started
 
-1. Choose which application you want to build as a team: [Option 1](./option-1.md) or [Option 2]()
+1. Choose which application you want to build as a team: [Option 1](./option-1.md) or [Option 2](./option-2.md)
 2. Choose the level of scaffolding you want to start with by selecting the appropriate branch
     - `empty` - this branch contains no scaffolding. Not even a package.json file.
     - `scaffolded` - this branch has ReactJS and Express set up.
