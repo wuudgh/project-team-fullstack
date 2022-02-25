@@ -1,9 +1,18 @@
-import './App.css';
+import "./App.css";
 
-export default function App() {
+import Search from "./Components/Search";
+//import React, { Component, useState } from "react";
+//import { render } from "react-dom";
+//import Calendar from "react-calendar";
+
+const App = () => {
   return (
-    <div className="App">
-      <p>Hello, world!</p>
+    <div className="appContainer">
+      
+      <Search />
+
+      {/* <Calendar /> */}
     </div>
   );
-}
+};
+export default App;
