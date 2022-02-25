@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
+* {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.main-header {
+  grid-area: "main-header";
+  display: grid;
+  grid-template-areas:
+    "home-button"
+    "about-us-button";
+  grid-template-columns: 8rem 8rem;
+  border: none;
+}
+
+.about-us {
+  grid-area: "about-us";
+  display: grid;
+  grid-template-areas:
+    "about-us-image"
+    "about-us-p";
+
+  grid-template-rows: 1fr 1fr;
+  position: sticky;
+}
+
+#home-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: rgb(255, 0, 68);
+  display: inline-block;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  margin-top: 25px;
+  transition: ease-out 0.6s;
+  font-size: 2rem;
+  outline: none;
+  font-size: medium;
+  width: 8rem;
+  height: 2rem;
+  border: none;
+}
+
+#about-us-button {
+  border: none;
+}
+
+.about-us-p {
+  color: blueviolet;
+}
