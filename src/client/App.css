@@ -89,3 +89,39 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
+
+.state {
+  margin-left: 20px;
+  padding: 10px;
+  margin-right: 20px;
+  margin: 5px;
+  background-color: rgb(247, 92, 144);
+  box-shadow: inset;
+}
+
+.brewery-name {
+  margin-left: 20px;
+}
+.brewery-type {
+  margin-left: 20px;
+  text-decoration: underline;
+}
+.brewery-street {
+  margin-left: 20px;
+}
+
+.brewery-phone {
+  margin-left: 20px;
+}
+
+.brewery-postal-code {
+  margin-left: 20px;
+}
+
+.brewery-state {
+  margin-left: 20px;
+}
+
+.brewery-url {
+  margin-left: 700px;
+}

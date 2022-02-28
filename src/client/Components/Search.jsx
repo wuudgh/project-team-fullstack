@@ -55,14 +55,13 @@ const SearchByState = () => {
           breweries.map((state, index) => {
             return (
               <div className="state" key={index}>
-                {/* <h3>State {index + 1}</h3> */}
-                <h2 className="brewery-name">{state.brewery_type}</h2>
+                <h2 className="brewery-type">{state.brewery_type}</h2>
                 <h3 className="brewery-name">{state.name}</h3>
                 <h3 className="brewery-street">{state.street}</h3>
                 <p className="brewery-phone">{state.phone}</p>
                 <p className="brewery-postal-code">{state.postal_code}</p>
                 <h2 className="brewery-state">{state.state}</h2>
-                <p className="brewery-url">{state.website_url}</p>
+                <a className="brewery-url">{state.website_url}</a>
 
 
 
