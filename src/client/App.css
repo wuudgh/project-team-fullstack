@@ -95,8 +95,9 @@ body {
   padding: 10px;
   margin-right: 20px;
   margin: 5px;
-  background-color: rgb(247, 92, 144);
+  background-color: gold;
   box-shadow: inset;
+  border-radius: 3px;
 }
 
 .brewery-name {
