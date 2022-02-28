@@ -1,11 +1,18 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
-const AboutUs = () => {
-    return (
-        <>
-            <h1>About Us</h1>
-        </>
-    );
-}
+const Header = () => {
    
-export default AboutUs;
+    return (
+      <header className="main-header">
+        <button id="home-button">
+          <Link to="/">HOME</Link>
+        </button>
+        <button id="about-us-button">
+          <Link to="/about-us">ABOUT US</Link>
+        </button>
+      </header>
+    )
+  }
+
+export default Header
