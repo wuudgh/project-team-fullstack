@@ -9,7 +9,7 @@ import listOfBreweries from "./listOfBreweris";
 const SearchByState = () => {
   const [breweries, setBreweries] = useState([]);
   const [searchState, setSearchState] = useState("");
-  console.log("okhhhhh",{breweries});
+  ///console.log("okhhhhh",{breweries});
 
   const onChangeHandler = (e) => {
     e.preventDefault();
@@ -35,16 +35,16 @@ const SearchByState = () => {
     <>
       <form className="search-bar"  onSubmit={(e) => findBreweries(e)}>
 
-        <div className="search-form">
+        <div className="search-by-state">
           <label>Search</label>
-          <input
+          <input 
             type="text"
             placeholder="Enter Your State"
             value={searchState}
             onChange={(e) => onChangeHandler(e)}
           />
         </div>
-        <input
+        <input className="display-breweries-button"
           type="Submit"
           value="Display Breweries"
         />
@@ -55,8 +55,8 @@ const SearchByState = () => {
           breweries.map((state, index) => {
             return (
               <div className="state" key={index}>
-                <h2 className="brewery-type">{state.brewery_type}</h2>
-                <h3 className="brewery-name">{state.name}</h3>
+                <h2 className="brewery-name">{state.name}</h2>
+                <h3 className="brewery-type">{state.brewery_type}</h3>
                 <h3 className="brewery-street">{state.street}</h3>
                 <p className="brewery-phone">{state.phone}</p>
                 <p className="brewery-postal-code">{state.postal_code}</p>
