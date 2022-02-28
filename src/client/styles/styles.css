@@ -20,7 +20,7 @@
     "about-us-image"
     "about-us-p";
 
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 50% 50%;
   position: sticky;
 }
 
@@ -43,8 +43,42 @@
 
 #about-us-button {
   border: none;
+  text-transform: uppercase;
+  background-color: rgb(255, 0, 68);
+  display: inline-block;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  margin-top: 25px;
+  margin-left: 20px;
+  transition: ease-out 0.6s;
+  font-size: 2rem;
+  outline: none;
+  font-size: medium;
+  width: 8rem;
+  height: 2rem;
+  border: none;
 }
 
 .about-us-p {
   color: blueviolet;
+  margin-left: auto;
+}
+
+.about-us-image {
+  box-shadow: inset;
+
+  margin-left: 5%;
+  margin-top: 10%;
+  border-radius: 3%;
+  box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-us-p {
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-right: 20px;
+}
+
+.brewery-name {
+  margin: auto;
 }
