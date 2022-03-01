@@ -1,12 +1,16 @@
 import { useState } from "react";
+import App from "../App";
+import { Route, Routes } from "react-router";
+import listOfBreweries from "./listOfBreweris";
 
 const SearchByState = () => {
   const [breweries, setBreweries] = useState([]);
   const [searchState, setSearchState] = useState("");
+  ///console.log("okhhhhh",{breweries});
 
   const onChangeHandler = (e) => {
     e.preventDefault();
-    console.log(e);
+    console.log("nice",e);
     setSearchState(e.target.value);
   };
 
@@ -17,7 +21,7 @@ const SearchByState = () => {
     fetch(`https://api.openbrewerydb.org/breweries?by_state=${searchState}`)
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         setBreweries(data);
       });
   };
@@ -25,9 +29,9 @@ const SearchByState = () => {
   return (
     <>
       <form className="search-bar" onSubmit={(e) => findBreweries(e)}>
-        <div className="search-form">
+        <div className="search-by-state">
           <label>Search</label>
-          <input
+          <input 
             type="text"
             placeholder="Enter Your State"
             value={searchState}
@@ -50,6 +54,7 @@ const SearchByState = () => {
             );
           })}
       </div>
+      
     </>
   );
 };

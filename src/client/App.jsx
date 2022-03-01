@@ -8,6 +8,7 @@ import "react-calendar/dist/Calendar.css";
 //import MainCalendar from "./Components/MainCalendar";
 
 const App = () => {
+  
   return (
     <div className="appContainer">
       <SearchByState />
