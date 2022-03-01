@@ -17,16 +17,14 @@ const SearchByState = () => {
     setSearchState(e.target.value);
   };
 
-  // const onChange = () => {
-  //   console.log(onChange);
-  // };
+  
 
   const findBreweries = (e) => {
     e.preventDefault();
     fetch(`https://api.openbrewerydb.org/breweries?by_state=${searchState}`)
       .then((resp) => resp.json())
       .then((data) => {
-        //console.log(data);
+      
         setBreweries(data);
       });
   };
