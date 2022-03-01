@@ -1,10 +1,6 @@
-//import e from "express";
-
 
 import { useState } from "react";
-import App from "../App";
-import { Route, Routes } from "react-router";
-import listOfBreweries from "./listOfBreweris";
+
 
 const SearchByState = () => {
   const [breweries, setBreweries] = useState([]);
@@ -63,11 +59,7 @@ const SearchByState = () => {
 
 
 
-                <div className="breweries">
-                  <p>{breweries.name} </p>
-                  <p>{breweries.street}</p>
-                  
-                </div>
+               
               </div>
             );
           })}
