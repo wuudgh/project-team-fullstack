@@ -1,18 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const Header = ({ title }) => {
   return (
     <header className="main-header">
-      <h1>{title}</h1>
-      <button id="home">
+      <h1 className="welcomeMsg">{title}</h1>
+      <button className="home">
         <Link to="/">HOME</Link>
       </button>
-      <button id="about-us">
+      <button className="aboutUs">
         <Link to="/about-us">ABOUT US</Link>
       </button>
-      
     </header>
   );
 };
@@ -22,27 +20,18 @@ Header.defaultProps = {
 
 export default Header;
 
-// import Button from "./Button";
+/* FOR DISCUSSION:
+Maybe stick to classess instead of id's to prevent confusion in styling 
+Consider moving position of buttons to top right corner? Will also need some styling
+We should discuss b/g/text colour etc- possibly golden yellow background with black text in the body; 
+header on a b/g of a picture
++/- login feature with mock backend?
+Need to add ternary statements for searchByState input to deal with invalid text input
 
-// const Header = ({ title }) => {
-//   return (
-//     <header className="header">
-//       <h1>{title}</h1>
-//       <Button color="red" text="Register" />
-//       <Button color="blue" text="LogIn" />
-//     </header>
-//   );
-// };
-
-// Header.defaultProps = {
-//   title: "Welcome To Brewery Tours",
-// };
-
-// export default Header;
-
-/* Already included file name '/home/molloyconor511/Our_Team_Project/project-team-fullstack/src/client/Components/Button.jsx' differs from file name '/home/molloyconor511/Our_Team_Project/project-team-fullstack/src/client/components/Button.jsx' only in casing.
-  The file is in the program because:
-    Imported via "./Button" from file '/home/molloyconor511/Our_Team_Project/project-team-fullstack/src/client/Components/Header.jsx'
-    Root file specified for compilation
-    Root file specified for compilation
+CHANGES MADE: 
+1. Switched id's of home and about Us buttons to classes and switched to camel Case.
+2. Assigned classname("welcomeMsg" to header title(line 7)) and centered the text.
+3. Removed border around appContainer- don't think there's much need for same
+4. Renamed "Search" component to "searchByState"
+5. Removed original CSS and react logos ;
 */

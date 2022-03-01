@@ -1,45 +1,14 @@
-/* .App {
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.welcomeMsg {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-ul {
-  list-style: none;
-} */
 
 .search-bar {
   margin-bottom: 40px;
@@ -63,24 +32,89 @@ ul {
   font-family: inherit;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: "Poppins", sans-serif;
 }
 
-.container {
+.appContainer {
   max-width: 500px;
   margin: 30px auto;
   overflow: auto;
   min-height: 300px;
-  border: 1px solid steelblue;
+  /* border: 1px solid steelblue; */
   padding: 30px;
   border-radius: 5px;
+}*/
+
+.main-header {
+  grid-area: "main-header";
+  display: grid;
+  grid-template-areas: "header-h1";
+
+  grid-template-columns: 1fr;
+  border: none;
+}
+
+#home-button {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: gold;
+  display: inline-block;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  margin-top: 25px;
+  margin-left: 20px;
+  transition: ease-out 0.6s;
+  font-size: 2rem;
+  outline: none;
+  font-size: medium;
+  width: 8rem;
+  height: 2rem;
+  border: none;
+}
+
+#about-us-button {
+  border: none;
+  text-transform: uppercase;
+  background-color: gold;
+  display: inline-block;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  margin-top: 25px;
+  margin-left: 20px;
+  transition: ease-out 0.6s;
+  font-size: 2rem;
+  outline: none;
+  font-size: medium;
+  width: 8rem;
+  height: 2rem;
+  border: none;
+}
+
+.about-us-image {
+  box-shadow: inset;
+
+  margin-left: 5%;
+  margin-top: 10%;
+  border-radius: 3%;
+  box-shadow: -30px 30px 20px rgba(0, 0, 0, 0.3);
+}
+.display-breweries-button {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.search-by-state {
+  margin-top: 20px;
+  margin-left: 20px;
+  border: none;
+}
+
+.about-us-p {
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-right: 20px;
+  color: purple;
 }
 
 .header {
@@ -88,4 +122,55 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  position: fixed;
 }
+
+.state {
+  margin-left: 20px;
+  padding: 10px;
+  margin-right: 20px;
+  margin: 5px;
+  background-color: gold;
+  box-shadow: inset;
+  border-radius: 3px;
+
+  align-items: center;
+}
+
+.brewery-name {
+  margin-left: 20px;
+  text-decoration: underline;
+}
+.brewery-type {
+  margin-left: 20px;
+}
+.brewery-street {
+  margin-left: 20px;
+}
+
+.brewery-phone {
+  margin-left: 20px;
+}
+
+.brewery-postal-code {
+  margin-left: 20px;
+}
+
+.brewery-state {
+  margin-left: 20px;
+}
+
+.brewery-url {
+  margin-left: 20px;
+}
+.myLoginContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+
