@@ -1,7 +1,7 @@
 import { useState } from "react";
-import App from "../App";
-import { Route, Routes } from "react-router";
-import listOfBreweries from "./listOfBreweris";
+// import App from "../App";
+// import { Route, Routes } from "react-router";
+// import listOfBreweries from "./listOfBreweris";
 
 const SearchByState = () => {
   const [breweries, setBreweries] = useState([]);
@@ -10,11 +10,9 @@ const SearchByState = () => {
 
   const onChangeHandler = (e) => {
     e.preventDefault();
-    console.log("nice",e);
+    console.log("nice", e);
     setSearchState(e.target.value);
   };
-
-
 
   const findBreweries = (e) => {
     e.preventDefault();
@@ -31,7 +29,7 @@ const SearchByState = () => {
       <form className="search-bar" onSubmit={(e) => findBreweries(e)}>
         <div className="search-by-state">
           <label>Search</label>
-          <input 
+          <input
             type="text"
             placeholder="Enter Your State"
             value={searchState}
@@ -46,15 +44,18 @@ const SearchByState = () => {
           breweries.map((state, index) => {
             return (
               <div className="state" key={index}>
-                <card className="breweries">
-                  <p> {state.name} </p>
-                  <p> {state.street}</p>
-                </card>
+                <h2 className="brewery-name">{state.name}</h2>
+                <h3 className="brewery-type">{state.brewery_type}</h3>
+                <h3 className="brewery-street">{state.street}</h3>
+                <p className="brewery-phone">{state.phone}</p>
+                <p className="brewery-postal-code">{state.postal_code}</p>
+                <h2 className="brewery-state">{state.state}</h2>
+                <a className="brewery-url">{state.website_url}</a>
+                
               </div>
             );
           })}
       </div>
-      
     </>
   );
 };
