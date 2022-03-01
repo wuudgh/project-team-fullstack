@@ -1,4 +1,3 @@
-//import e from "express";
 import { useState } from "react";
 
 const SearchByState = () => {
@@ -11,9 +10,7 @@ const SearchByState = () => {
     setSearchState(e.target.value);
   };
 
-  // const onChange = () => {
-  //   console.log(onChange);
-  // };
+
 
   const findBreweries = (e) => {
     e.preventDefault();
@@ -27,8 +24,7 @@ const SearchByState = () => {
 
   return (
     <>
-      <form className="search-bar"  onSubmit={(e) => findBreweries(e)}>
-
+      <form className="search-bar" onSubmit={(e) => findBreweries(e)}>
         <div className="search-form">
           <label>Search</label>
           <input
@@ -38,15 +34,21 @@ const SearchByState = () => {
             onChange={(e) => onChangeHandler(e)}
           />
         </div>
-        <input
-          type="Submit"
-          value="Display Breweries"
-        />
+        <input type="submit" value="Display Breweries" />
       </form>
 
-      
-      <div className = "brewery_results">
-        
+      <div className="breweryResults">
+        {breweries &&
+          breweries.map((state, index) => {
+            return (
+              <div className="state" key={index}>
+                <card className="breweries">
+                  <p> {state.name} </p>
+                  <p> {state.street}</p>
+                </card>
+              </div>
+            );
+          })}
       </div>
     </>
   );
