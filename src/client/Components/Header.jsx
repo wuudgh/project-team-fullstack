@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-<<<<<<< HEAD
 const Header = ({ title }) => {
   return (
     <header className="main-header">
@@ -19,29 +18,8 @@ const Header = ({ title }) => {
 Header.defaultProps = {
   title: "Welcome To Brewery Tours",
 };
-=======
-const Header = () => {
-   
-    return (
-      <header className="main-header">
-        <h1 id='header-h1'>W & C BREWERY</h1>
-        <div className='header-buttons'>
-        <button id="home-button">
-          <Link to="/">HOME</Link>
-        </button>
-        <button id="about-us-button">
-          <Link to="/about-us">ABOUT US</Link>
-        </button>
-        </div> 
-      </header>
-    )
-  }
-
-export default Header
->>>>>>> Styling-header
 
 
-<<<<<<< HEAD
 /* FOR DISCUSSION:
 Maybe stick to classess instead of id's to prevent confusion in styling 
 Consider moving position of buttons to top right corner? Will also need some styling
@@ -57,7 +35,3 @@ CHANGES MADE:
 4. Renamed "Search" component to "searchByState"
 5. Removed original CSS and react logos ;
 */
-=======
-
-//src/client/Components/Header.jsx
->>>>>>> Styling-header
