@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Header = ({ title }) => {
   return (
     <header className="main-header">
+      
       <h1 className="welcomeMsg">{title}</h1>
       <button className="home">
         <Link to="/">HOME</Link>

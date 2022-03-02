@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // import App from "../App";
 // import { Route, Routes } from "react-router";
 // import listOfBreweries from "./listOfBreweris";
@@ -6,12 +7,22 @@ import { useState } from "react";
 const SearchByState = () => {
   const [breweries, setBreweries] = useState([]);
   const [searchState, setSearchState] = useState("");
+  console.log({ breweries });
+  // const [searchName, setSearchName] = useState("")
   ///console.log("okhhhhh",{breweries});
 
   const onChangeHandler = (e) => {
     e.preventDefault();
     console.log("nice", e);
     setSearchState(e.target.value);
+  };
+
+  // const onChangeName = (e) => {
+  //   setSearchName(e.target.value)
+  // }
+  const onClickHandler = () => {
+    <Link to="/BookingForm">Booking Form</Link>;
+    console.log("Link Appears")
   };
 
   const findBreweries = (e) => {
@@ -40,21 +51,41 @@ const SearchByState = () => {
       </form>
 
       <div className="breweryResults">
-        {breweries &&
-          breweries.map((state, index) => {
-            return (
+        {breweries.map((state, index) => {
+          return (
+            <div>
               <div className="state" key={index}>
-                <h2 className="brewery-name">{state.name}</h2>
-                <h3 className="brewery-type">{state.brewery_type}</h3>
-                <h3 className="brewery-street">{state.street}</h3>
-                <p className="brewery-phone">{state.phone}</p>
-                <p className="brewery-postal-code">{state.postal_code}</p>
-                <h2 className="brewery-state">{state.state}</h2>
-                <a className="brewery-url">{state.website_url}</a>
-                
+                <div>
+                  <button onClick={onClickHandler}>
+                    <h2 className="brewery-name">{state.name}</h2>
+                  </button>
+                </div>
+                <div>
+                  <h3 className="brewery-type">{state.brewery_type}</h3>
+                  <h3 className="brewery-street">{state.street}</h3>
+                  <p className="brewery-phone">{state.phone}</p>
+                  <p className="brewery-postal-code">{state.postal_code}</p>
+                  <h2 className="brewery-state">{state.state}</h2>
+                  <a className="brewery-url">{state.website_url}</a>
+                </div>
               </div>
-            );
-          })}
+              {/* <div className="FilterSection">
+              
+                  <h3>Filter Section</h3>
+                  <form className="FilterByBreweryName">
+                    <label>Filter By Brewery Name</label>
+                    <input
+                      type="text"
+                      placeholder="Enter Brewery Name"
+                      value={e}
+                      onChange={(e) => onChangeName(e)}
+                    />
+                    <input type="submit" value="Breweries By Name Filter" />
+                  </form>
+                </div> */}
+            </div>
+          );
+        })}
       </div>
     </>
   );
