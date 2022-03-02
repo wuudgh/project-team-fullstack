@@ -34,7 +34,7 @@ const SearchByState = () => {
       <form className="search-bar"  onSubmit={(e) => findBreweries(e)}>
 
         <div className="search-by-state">
-          <label>Search</label>
+          <label></label>
           <input 
             type="text"
             placeholder="Enter Your State"
