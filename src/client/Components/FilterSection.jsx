@@ -95,20 +95,19 @@ const FilterSection = () => {
       <form onSubmit={(e) => findBreweriesType(e)}>
         <div className="filterBreweryType">
           <h3>Search Breweries By Brewery Type</h3>
-          <select
-            className="selectBeerType"
-            onChange={(e) => this.setState({ beerType: e.target.value })}
-          >
-            <option value="micro">Micro</option>
+          {/* <select
+            className="form-control mb-3"
+            onChange={(e) => this.setState({ brewery_type: e.target.value })}>
+            <option value="Micro">Micro</option>
             <option value="Regional">Regional</option>
-            <option value="brewpub">Brewpub</option>
-          </select>
-          {/* <input
+            <option value="Brewpub">Brewpub</option>
+          </select> */}
+          <input
             type="text"           
             placeholder="Enter Brewery Type"
             value={searchValueType}
             onChange={handleSearchTypeChange}
-          /> */}
+          />
           <br />
           {/* <button type="button" onClick={handleSearchReset}>
             Reset Search
@@ -126,9 +125,6 @@ const FilterSection = () => {
             onChange={handleSearchCityChange}
           />
           <br />
-          {/* <button type="button" onClick={handleSearchReset}>
-            Reset Search
-          </button> */}
         </div>
         <input type="submit" value="Display Search Results" />
       </form>
@@ -156,7 +152,6 @@ const FilterSection = () => {
               <p className="capitalFirstLetter">
                 {beerTypeFirstCapitalLetter(brewery.brewery_type)}
               </p>
-              {/* <p> {brewery.brewery_type} </p> */}
               <p> {brewery.street} </p>
               <p> {brewery.city} </p>
             </div>
