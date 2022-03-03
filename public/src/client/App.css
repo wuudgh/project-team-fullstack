@@ -43,7 +43,7 @@ body {
   padding: 30px;
   border-radius: 5px;
 }
-*/ .main-header {
+ .main-header {
   grid-area: "main-header";
   display: grid;
   grid-template-areas: "header-h1";
