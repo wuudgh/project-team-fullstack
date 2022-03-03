@@ -83,7 +83,7 @@ const SearchByState = () => {
                   <button className="bookNow" onClick={onClickHandler}>
                     <h3>
                       {`
-                        Click Here To~
+                        Click Here To
                         ${bookTourBtn}
                       `}
                     </h3>
