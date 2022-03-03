@@ -77,6 +77,7 @@ const FilterSection = () => {
       <form onSubmit={(e) => findBreweriesName(e)}>
         <div className="startFilterByName">
           <h3>Search Breweries By Name</h3>
+
           <input
             type="text"
             placeholder="Enter Brewery Name"
@@ -94,14 +95,20 @@ const FilterSection = () => {
       <form onSubmit={(e) => findBreweriesType(e)}>
         <div className="filterBreweryType">
           <h3>Search Breweries By Brewery Type</h3>
-
-          <input
-            // type="text"
-            type=""
+          <select
+            className="selectBeerType"
+            onChange={(e) => this.setState({ beerType: e.target.value })}
+          >
+            <option value="micro">Micro</option>
+            <option value="Regional">Regional</option>
+            <option value="brewpub">Brewpub</option>
+          </select>
+          {/* <input
+            type="text"           
             placeholder="Enter Brewery Type"
             value={searchValueType}
             onChange={handleSearchTypeChange}
-          />
+          /> */}
           <br />
           {/* <button type="button" onClick={handleSearchReset}>
             Reset Search
