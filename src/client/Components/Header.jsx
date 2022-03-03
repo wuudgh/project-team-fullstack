@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Header = ({ title }) => {
   return (
     <header className="main-header">
-      
       <h1 className="welcomeMsg">{title}</h1>
       <button className="home">
         <Link to="/">HOME</Link>
@@ -19,6 +18,7 @@ Header.defaultProps = {
   title: "Welcome To Brewery Tours",
 };
 
+export default Header;
 
 /* FOR DISCUSSION:
 Maybe stick to classess instead of id's to prevent confusion in styling 

@@ -1,5 +1,3 @@
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -44,9 +42,8 @@ body {
   /* border: 1px solid steelblue; */
   padding: 30px;
   border-radius: 5px;
-}*/
-
-.main-header {
+}
+*/ .main-header {
   grid-area: "main-header";
   display: grid;
   grid-template-areas: "header-h1";
@@ -137,14 +134,22 @@ body {
   align-items: center;
 }
 
+.brewery-name-button {
+  margin-left: 20px;
+}
+
 .brewery-name {
   margin-left: 20px;
+  margin-right: 20px;
   text-decoration: underline;
 }
 .brewery-type {
   margin-left: 20px;
 }
 .brewery-street {
+  margin-left: 20px;
+}
+.brewery-city {
   margin-left: 20px;
 }
 
@@ -163,14 +168,16 @@ body {
 .brewery-url {
   margin-left: 20px;
 }
+.bookNow {
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.book-tour {
+  color: red;
+}
 .myLoginContainer {
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
-
-
-

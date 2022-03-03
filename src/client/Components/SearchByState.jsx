@@ -20,21 +20,26 @@ const SearchByState = () => {
   // const onChangeName = (e) => {
   //   setSearchName(e.target.value)
   // }
-  const onClickHandler = () => {
-    <Link to="/BookingForm">Booking Form</Link>;
-    console.log("Link Appears");
-  };
 
   const findBreweries = (e) => {
     e.preventDefault();
     fetch(`https://api.openbrewerydb.org/breweries?by_state=${searchState}`)
       .then((resp) => resp.json())
       .then((data) => {
-        //console.log(data);
+        console.log(data);
         setBreweries(data);
       });
   };
 
+  const onClickHandler = () => {
+    <Link to="/BookingForm">Booking Form</Link>;
+    console.log("Link Appears");
+  };
+
+  const firstCapitalLetter = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+  const bookTourBtn = `Book Your Tour`;
   return (
     <>
       <form className="search-bar" onSubmit={(e) => findBreweries(e)}>
@@ -52,22 +57,37 @@ const SearchByState = () => {
 
       <div className="breweryResults">
         {breweries.map((state, index) => {
+          console.log("MY STATE", state, "MY INDEX", index);
           return (
             <div>
               <div className="state" key={index}>
                 <div>
-                  <button onClick={onClickHandler}>
+                  <button
+                    className="brewery-name-button"
+                    onClick={onClickHandler}
+                  >
                     <h2 className="brewery-name">{state.name}</h2>
                   </button>
                 </div>
+
                 <div>
-                  <h3 className="brewery-type">{state.brewery_type}</h3> /*
-                  convert 1st letter to upper case */
+                  <h3 className="brewery-type">
+                    {firstCapitalLetter(state.brewery_type)}
+                  </h3>
                   <h3 className="brewery-street">{state.street}</h3>
+                  <h3 className="brewery-city">{state.city}</h3>
                   <p className="brewery-phone">{state.phone}</p>
                   <p className="brewery-postal-code">{state.postal_code}</p>
                   <h2 className="brewery-state">{state.state}</h2>
                   <a className="brewery-url">{state.website_url}</a>
+                  <button className="bookNow" onClick={onClickHandler}>
+                    <h3>
+                      {`
+                        Click Here To~
+                        ${bookTourBtn}
+                      `}
+                    </h3>
+                  </button>
                 </div>
               </div>
             </div>
@@ -79,3 +99,19 @@ const SearchByState = () => {
 };
 
 export default SearchByState;
+/*
+<div className="breweryResults">
+        {breweries &&
+          breweries.map((state, index) => {
+            return (
+              <div className="state" key={index}>
+                <card className="breweries">
+                  <p> {state.name} </p>
+                  <p> {state.street}</p>
+                </card>
+              </div>
+            );
+          })}
+        ;
+      </div>
+*/

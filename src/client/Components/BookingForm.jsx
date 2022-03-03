@@ -1,9 +1,10 @@
-const BookingForm = () => {
-  return (
-    <div>BookingForm
-        <h3>Hello</h3>
-    </div>
-  )
-}
+// const BookingForm = () => {
+//   return (
+    
+//   )
+// }
 
-export default BookingForm
+// export default BookingForm
+ {/* <pre className="code">
+        <code>{JSON.stringify(breweries, null, 2)}</code>
+      </pre> */}
